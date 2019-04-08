@@ -157,7 +157,7 @@ module.exports = ({
                       )}</td>
                     </tr>
                     <tr>
-                      <td>Balance Due: $${balanceDue}</td>
+                      <td>Amount Due: $${total}</td>
                     </tr>
                   </table>
                 </td>
