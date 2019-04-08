@@ -24,6 +24,7 @@ module.exports = ({
   headerellipsis = str => {
     return str.length > 10 ? str.slice(0, 10) : str;
   };
+  let taxpercent = Number(tax) * 100;
   // const items = invoiceItems.map(row => {
   //   const { item, quantity, rate, amount} = row;
   //   return (
@@ -195,7 +196,7 @@ module.exports = ({
               </tr>
               <tr>
                 <td>Tax:</td>
-                <td>${tax}</td>
+                <td>${taxpercent}%</td>
               </tr>
               <tr>
                 <td>Shipping:</td>
