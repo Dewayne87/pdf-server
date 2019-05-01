@@ -2,17 +2,17 @@ module.exports = ({
   invoiceNumber,
   addressFrom,
   addressTo,
-  languageSelection,
-  currencySelection,
-  stateRegionTo,
+  stateTo,
+  company,
   zipCodeTo,
   cityTo,
-  clientEmailTo,
-  date,
-  invoiceDueSelection,
+  emailTo,
+  selectedDate,
+  invoiceDueDate,
+  invoiceDescription,
   balanceDue,
-  invoiceNotes,
-  invoiceTerms,
+  notes,
+  terms,
   invoiceItems,
   subtotal,
   discount,
@@ -141,7 +141,7 @@ module.exports = ({
             <table class="invoice-header">
               <tr>
                 <td class="logo">
-                  
+                  ${company}
                 </td>
                 <td>
                   <table class="invoice-dates">
@@ -149,11 +149,11 @@ module.exports = ({
                       <td>Invoice #: ${invoiceNumber}</td>
                     </tr>
                     <tr>
-                      <td>Date: ${headerellipsis(date)}</td>
+                      <td>Date: ${headerellipsis(selectedDate)}</td>
                     </tr>
                     <tr>
                       <td>Due Date: ${headerellipsis(
-                        invoiceDueSelection
+                        invoiceDueDate
                       )}</td>
                     </tr>
                     <tr>
@@ -176,8 +176,8 @@ module.exports = ({
                 <td class="invoice-address">
                 <br /><br /><strong class="address-frto">To: </strong><br />
                  ${addressTo}<br />
-                 ${cityTo},${" " + stateRegionTo} ${"  " + zipCodeTo}<br />
-                 ${clientEmailTo} <br />
+                 ${cityTo},${" " + stateTo} ${"  " + zipCodeTo}<br />
+                 ${emailTo} <br />
                 </td>
               </tr>
             </table>
@@ -218,10 +218,10 @@ module.exports = ({
             <div class="invoice-terms">
               <h3>Notes and terms \(if applicable\)</h3>
               <p>
-                <strong>Notes:</strong>${" " + invoiceNotes + "."}
+                <strong>Notes:</strong>${" " + notes + "."}
               </p>
               <p>
-              <strong>Terms:</strong>${" " + invoiceTerms + "."}
+              <strong>Terms:</strong>${" " + terms + "."}
               </p>
             </div>
           </td>
@@ -248,11 +248,11 @@ module.exports = ({
                       <td>Invoice #: ${invoiceNumber}</td>
                     </tr>
                     <tr>
-                      <td>Date: ${headerellipsis(date)}</td>
+                      <td>Date: ${headerellipsis(selectedDate)}</td>
                     </tr>
                     <tr>
                       <td>Due Date: ${headerellipsis(
-                        invoiceDueSelection
+                        invoiceDueDate
                       )}</td>
                     </tr>
                     <tr>
