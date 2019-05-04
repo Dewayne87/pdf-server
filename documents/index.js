@@ -1,5 +1,8 @@
 import Button from "@material-ui/core/Button";
-
+import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 module.exports = ({
   invoiceNumber,
   addressFrom,
@@ -137,7 +140,15 @@ module.exports = ({
   </head>
   <body>
     <div class="page">
-${<Button/>}
+${(
+  <AppBar style={{ backgroundColor: "#eff7f2" }} position="static">
+    <Toolbar>
+      <Typography color="inherit" noWrap>
+        Invoices
+      </Typography>
+    </Toolbar>
+  </AppBar>
+)}
     </div>
   </body>
 </html>
