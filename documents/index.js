@@ -1,3 +1,5 @@
+import Button from "@material-ui/core/Button";
+
 module.exports = ({
   invoiceNumber,
   addressFrom,
@@ -135,7 +137,7 @@ module.exports = ({
   </head>
   <body>
     <div class="page">
-${company.name}
+${<Button/>}
     </div>
   </body>
 </html>
