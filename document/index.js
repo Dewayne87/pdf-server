@@ -154,9 +154,9 @@ module.exports = ({
               </p>
             </div>
           </div>
-          <div class="box-container bottom">
-            <div class="box">
-              <p>
+          <table>
+          <tr>
+          <td>
                 <strong>
                   <span class="entryName">From:</span>
                 </strong>
@@ -172,8 +172,9 @@ module.exports = ({
                 ${company.email}
                 <br />
                 ${" " + company.phoneNumber}
-              </p>
-            </div>
+                </td>
+                </tr>
+                </table>
             <div class="box">
               <p>
                 <strong>
