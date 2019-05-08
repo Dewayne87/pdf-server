@@ -97,12 +97,13 @@ module.exports = ({
   width: 49%;
   display:inline-block;
   border:1px solid green;
-  min-height: 400px;
+  height:100%;
   font-size: 1.4rem;
   overflow-wrap: break-word;
 }
 .top-box{
   width: 100%;
+  height:200px;
 }
 .header {
   font-size: 2rem;
@@ -184,7 +185,7 @@ module.exports = ({
             </div>
           </div>
           <div class="box-container bottom">
-            <div class="box mobileBorder">
+            <div class="box">
               <p>
                 <strong>
                   <span class="entryName">Invoice Description:</span>
