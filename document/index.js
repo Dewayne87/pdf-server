@@ -94,9 +94,10 @@ module.exports = ({
   color: #4fc878;
 }
 .box {
-  width: 50%;
+  width: 49%;
   display:inline-block;
   border:1px solid green;
+  min-height: 400px;
   font-size: 1.4rem;
   overflow-wrap: break-word;
 }
