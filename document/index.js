@@ -173,10 +173,7 @@ module.exports = ({
                 <br />
                 ${" " + company.phoneNumber}
                 </td>
-                </tr>
-                </table>
-            <div class="box">
-              <p>
+<td>
                 <strong>
                   <span class="entryName">To:</span>
                 </strong>
@@ -191,8 +188,9 @@ module.exports = ({
                 <br />
                 ${customer.email}</br>
                 ${" " + customer.phoneNumber}
-              </p>
-            </div>
+                </td>
+                </tr>
+                </table>
           </div>
           <div class="box-container">
             <div class="boxmoney">
