@@ -89,13 +89,12 @@ module.exports = ({
   border-bottom: 1px solid black;
 }
 .entryName {
-  font-size: 3.5rem;
+  font-size: 1.6rem;
   color: #4fc878;
 }
 .box {
   width: 45%;
   min-height: 220px;
-  padding: 8px 0px 8px 8px;
   font-size: 1.6rem;
   overflow-wrap: break-word;
 }
