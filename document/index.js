@@ -116,27 +116,27 @@ module.exports = ({
                 <strong>
                   <span className="entryName">Invoice #:</span>
                 </strong>
-                ${" " + invoice.number}
+                ${" " + number}
                 <br />
                 <strong>
                   <span className="entryName">Date:</span>
                 </strong>
-                ${headerellipsis(" " + invoice.date)}
+                ${headerellipsis(" " + date)}
                 <br />
                 <strong>
                   <span className="entryName">Due Date:</span>
                 </strong>
-                ${headerellipsis(" " + invoice.dueDate)}
+                ${headerellipsis(" " + dueDate)}
                 <br />
                 <strong>
                   <span className="entryName">Total:</span>
                 </strong>
-                ${" $" + invoice.total}
+                ${" $" + total}
                 <br />
                 <strong>
                   <span className="entryName">Amount Due:</span>
                 </strong>
-                ${" $" + invoice.balance}
+                ${" $" + balance}
               </p>
             </div>
           </div>
@@ -186,26 +186,26 @@ module.exports = ({
                   <span className="entryName">Invoice Description:</span>
                 </strong>
                 <br />
-                ${invoice.description + "."}
+                ${description + "."}
               </p>
             </div>
             <div className="box">
               <p className="subtotalTax">Subtotal: $${
-                invoice.subtotal
+                subtotal
               }</p>
               <p className="shippingDiscount">Discount: $${
-                invoice.discount
+                discount
               }</p>
               <p className="subtotalTax">
                 Tax:
-                ${" " + Number(invoice.tax) * 100}%
+                ${" " + Number(tax) * 100}%
               </p>
               <p className="shippingDiscount">Shipping: $${
-                invoice.shipping
+                shipping
               }</p>
-              <p className="total-due">Total: $${invoice.total}</p>
+              <p className="total-due">Total: $${total}</p>
               <p className="amount-paid">Balance: $${
-                invoice.balance
+                balance
               }</p>
             </div>
           </div>
@@ -216,7 +216,7 @@ module.exports = ({
                   <span className="entryName">Notes (if applicable):</span>{" "}
                 </strong>
                 <br />
-                ${invoice.notes + "."}
+                ${notes + "."}
               </p>
             </div>
             <div className="box">
@@ -225,7 +225,7 @@ module.exports = ({
                   <span className="entryName">Terms (if applicable):</span>
                 </strong>
                 <br />
-                ${invoice.terms + "."}
+                ${terms + "."}
               </p>
             </div>
           </div>
