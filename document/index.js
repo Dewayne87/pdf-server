@@ -84,18 +84,20 @@ module.exports = ({
 .box-container {
   display: flex;
   justify-content: space-between;
+  border:1px solid red;
 }
 .bottom {
   border-bottom: 1px solid black;
 }
 .entryName {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #4fc878;
 }
 .box {
   width: 45%;
+  border:1px solid green;
   min-height: 220px;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   overflow-wrap: break-word;
 }
 .top-box{
@@ -108,7 +110,9 @@ module.exports = ({
   </head>
   <body>
     <div class="container">
-    <div class="appbar header"><h3>${capitalizeFirstLetter(company.name)}</h3></div>
+    <div class="appbar header"><h3>${capitalizeFirstLetter(
+      company.name
+    )}</h3></div>
 <div class="box-container bottom">
             <div class="top-box box">
               <p>
@@ -189,22 +193,22 @@ module.exports = ({
               </p>
             </div>
             <div class="box">
-              <p class="subtotalTax">Subtotal: $${subtotal}</p>
-              <p class="shippingDiscount">Discount: $${discount}</p>
-              <p class="subtotalTax">
+              <span class="subtotalTax">Subtotal: $${subtotal}</span><br/>
+              <span class="shippingDiscount">Discount: $${discount}</span><br/>
+              <span class="subtotalTax">
                 Tax:
                 ${" " + Number(tax) * 100}%
-              </p>
-              <p class="shippingDiscount">Shipping: $${shipping}</p>
-              <p class="total-due">Total: $${total}</p>
-              <p class="amount-paid">Balance: $${balance}</p>
+              </span><br/>
+              <span class="shippingDiscount">Shipping: $${shipping}</span><br/>
+              <span class="total-due">Total: $${total}</span><br/>
+              <span class="amount-paid">Balance: $${balance}</span><br/>
             </div>
           </div>
           <div class="box-container">
             <div class="box">
               <p>
                 <strong>
-                  <span class="entryName">Notes (if applicable):</span>{" "}
+                  <span class="entryName">Notes (if applicable):</span>
                 </strong>
                 <br />
                 ${notes + "."}
