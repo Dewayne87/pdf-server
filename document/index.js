@@ -96,20 +96,20 @@ module.exports = ({
   width: 45%;
   min-height: 220px;
   padding: 8px 0px 8px 8px;
-  font-size: 3.5rem;
+  font-size: 1.6rem;
   overflow-wrap: break-word;
 }
 .top-box{
   width: 100%;
 }
 .header {
-  font-size: 4rem;
+  font-size: 2rem;
 }
     </style>
   </head>
   <body>
     <div class="container">
-    <div class="appbar"><h3>${capitalizeFirstLetter(company.name)}</h3></div>
+    <div class="appbar header"><h3>${capitalizeFirstLetter(company.name)}</h3></div>
 <div class="box-container bottom">
             <div class="top-box box">
               <p>
@@ -222,7 +222,7 @@ module.exports = ({
             </div>
           </div>
 
-    <div class="appbar"><h3>Invoice Items (if applicable)</h3></div>
+    <div class="appbar header"><h3>Invoice Items (if applicable)</h3></div>
             <table>
             <tr>
                 <td>Name</td>
