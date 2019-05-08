@@ -97,13 +97,13 @@ module.exports = ({
   width: 49%;
   display:inline-block;
   border:1px solid green;
-  height:100%;
+  height:350px;
   font-size: 1.4rem;
   overflow-wrap: break-word;
 }
 .boxmoney{
     display:inline-block;
-    width;
+    width:49%;
     height:300px;
   border:1px solid green;
   font-size: 1.4rem;
@@ -193,7 +193,7 @@ module.exports = ({
               </p>
             </div>
           </div>
-          <div class="box-container bottom">
+          <div class="box-container">
             <div class="boxmoney">
               <p>
                 <strong>
