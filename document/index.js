@@ -95,6 +95,7 @@ module.exports = ({
 }
 .box {
   width: 45%;
+  display:inline-block;
   border:1px solid green;
   min-height: 220px;
   font-size: 1.4rem;
