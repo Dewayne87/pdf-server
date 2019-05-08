@@ -1,0 +1,247 @@
+module.exports = ({
+  customer,
+  company,
+  number,
+  date,
+  dueDate,
+  description,
+  balance,
+  notes,
+  terms,
+  items,
+  subtotal,
+  discount,
+  tax,
+  shipping,
+  total
+}) => {
+        const headerellipsis = str => {
+          return str.length > 10 ? str.slice(0, 11) : str;
+        };
+        const itemChecker = items => {
+          let emptyItems = [
+            {
+              name: "",
+              description: "",
+              cost: "",
+              quantity: "",
+              amount: ""
+            }
+          ];
+          return items ? items : emptyItems;
+        };
+
+        const capitalizeFirstLetter = str => {
+          return str.charAt(0).toUpperCase() + str.slice(1);
+        };
+        let taxpercent = Number(tax) * 100;
+        // const invoiceItems = items.map(row => {
+        //   const { name, description, cost, quantity, amount} = row;
+        //   return (
+        //     `<tr class='invoice-item'>
+        //       <td>${name}</td>
+        //       <td>${description}</td>
+        //       <td>${cost}</td>
+        //       <td>${quantity}</td>
+        //       <td>${amount}</td>
+        //     </tr>`
+        //   )
+        // })
+        //   add items const to line 272 when items array working like this ->>//   ${items.join()}
+
+        return `
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+    body{
+     width:99%;
+    }
+    .container{
+     margin: "20px auto";
+     width:99%;
+    border: "1px solid #eff7f2"
+    }
+.shippingDiscount {
+  background: lightgray;
+}
+.appbar{
+    width:100%;
+        backgroundColor: "#eff7f2",
+
+}
+.subtotalTax {
+  background: #eff7f2;
+}
+.total-due {
+  background: rgb(224, 123, 105);
+}
+.amount-paid {
+  background: #a8e4bc;
+}
+.box-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom {
+  border-bottom: 1px solid black;
+}
+.entryName {
+  font-size: 3.5rem;
+  color: #4fc878;
+}
+.box {
+  width: 45%;
+  min-height: 220px;
+  padding: 8px 0px 8px 8px;
+  font-size: 3.5rem;
+  overflow-wrap: break-word;
+}
+.top-box{
+  width: 100%;
+}
+.header {
+  font-size: 4rem;
+}
+    </style>
+  </head>
+  <body>
+    <div className="container">
+    <div className="appbar"><h3>${company.name}</h3></div>
+<div className="box-container bottom">
+            <div className="top-box box">
+              <p>
+                <strong>
+                  <span className="entryName">Invoice #:</span>
+                </strong>
+                ${" " + invoice.number}
+                <br />
+                <strong>
+                  <span className="entryName">Date:</span>
+                </strong>
+                ${headerellipsis(" " + invoice.date)}
+                <br />
+                <strong>
+                  <span className="entryName">Due Date:</span>
+                </strong>
+                ${headerellipsis(" " + invoice.dueDate)}
+                <br />
+                <strong>
+                  <span className="entryName">Total:</span>
+                </strong>
+                ${" $" + invoice.total}
+                <br />
+                <strong>
+                  <span className="entryName">Amount Due:</span>
+                </strong>
+                ${" $" + invoice.balance}
+              </p>
+            </div>
+          </div>
+          <div className="box-container bottom">
+            <div className="box">
+              <p>
+                <strong>
+                  <span className="entryName">From:</span>
+                </strong>
+                <br />
+                ${capitalizeFirstLetter(company.name)}
+                <br />
+                ${company.address1},${" " + company.address2}
+                <br />
+                ${capitalizeFirstLetter(company.city)},
+                ${" " + company.state.toUpperCase()}
+                ${" " + company.zipCode}
+                <br />
+                ${company.email}
+                <br />
+                ${" " + company.phoneNumber}
+              </p>
+            </div>
+            <div className="box">
+              <p>
+                <strong>
+                  <span className="entryName">To:</span>
+                </strong>
+                <br />
+                ${capitalizeFirstLetter(customer.name)}
+                <br />
+                ${customer.address1},${" " + customer.address2}
+                <br />
+                ${capitalizeFirstLetter(customer.city)},
+                ${" " + customer.state.toUpperCase()}
+                ${" " + customer.zipCode}
+                <br />
+                ${customer.email}
+                ${" " + customer.phoneNumber}
+              </p>
+            </div>
+          </div>
+          <div className="box-container bottom">
+            <div className="box mobileBorder">
+              <p>
+                <strong>
+                  <span className="entryName">Invoice Description:</span>
+                </strong>
+                <br />
+                ${invoice.description + "."}
+              </p>
+            </div>
+            <div className="box">
+              <p className="subtotalTax">Subtotal: $${
+                invoice.subtotal
+              }</p>
+              <p className="shippingDiscount">Discount: $${
+                invoice.discount
+              }</p>
+              <p className="subtotalTax">
+                Tax:
+                ${" " + Number(invoice.tax) * 100}%
+              </p>
+              <p className="shippingDiscount">Shipping: $${
+                invoice.shipping
+              }</p>
+              <p className="total-due">Total: $${invoice.total}</p>
+              <p className="amount-paid">Balance: $${
+                invoice.balance
+              }</p>
+            </div>
+          </div>
+          <div className="box-container">
+            <div className="box">
+              <p>
+                <strong>
+                  <span className="entryName">Notes (if applicable):</span>{" "}
+                </strong>
+                <br />
+                ${invoice.notes + "."}
+              </p>
+            </div>
+            <div className="box">
+              <p>
+                <strong>
+                  <span className="entryName">Terms (if applicable):</span>
+                </strong>
+                <br />
+                ${invoice.terms + "."}
+              </p>
+            </div>
+          </div>
+
+    <div className="appbar"><h3>Invoice Items (if applicable)</h3></div>
+            <table>
+            <tr>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Cost</td>
+                <td>Quantity</td>
+                <td>Amount</td>
+            </tr>
+            </table>
+    </div>
+  </body>
+</html>
+  `;
+      };

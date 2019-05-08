@@ -5,7 +5,7 @@ const pdf = require("html-pdf");
 const logger = require('morgan');
 const helmet = require('helmet');
 const cors = require("cors");
-const pdfTemplate = require("./documents");
+const pdfTemplate = require("./document");
 
 const app = express();
 const port = process.env.PORT || 5000;

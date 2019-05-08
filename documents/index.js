@@ -1,25 +1,19 @@
 module.exports = ({
-  invoiceNumber,
-  addressFrom,
-  addressTo,
-  stateTo,
+  customer,
   company,
-  zipCodeTo,
-  cityTo,
-  emailTo,
-  selectedDate,
-  invoiceDueDate,
-  invoiceDescription,
-  balanceDue,
+  number,
+  date,
+  dueDate,
+  description,
+  balance,
   notes,
   terms,
-  invoiceItems,
+  items,
   subtotal,
   discount,
   tax,
   shipping,
   total,
-  amountPaid
 }) => {
   headerellipsis = str => {
     return str.length > 10 ? str.slice(0, 10) : str;
