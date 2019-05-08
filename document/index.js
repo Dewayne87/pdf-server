@@ -101,6 +101,15 @@ module.exports = ({
   font-size: 1.4rem;
   overflow-wrap: break-word;
 }
+.boxmoney{
+    display:inline-block;
+    width;
+    height:300px;
+  border:1px solid green;
+  font-size: 1.4rem;
+  overflow-wrap: break-word;
+
+}
 .top-box{
   width: 100%;
   height:200px;
@@ -179,13 +188,13 @@ module.exports = ({
                 ${" " + customer.state.toUpperCase()}
                 ${" " + customer.zipCode}
                 <br />
-                ${customer.email}
+                ${customer.email}</br>
                 ${" " + customer.phoneNumber}
               </p>
             </div>
           </div>
           <div class="box-container bottom">
-            <div class="box">
+            <div class="boxmoney">
               <p>
                 <strong>
                   <span class="entryName">Invoice Description:</span>
@@ -194,7 +203,7 @@ module.exports = ({
                 ${description + "."}
               </p>
             </div>
-            <div class="box">
+            <div class="boxmoney">
               <span class="subtotalTax">Subtotal: $${subtotal}</span><br/>
               <span class="shippingDiscount">Discount: $${discount}</span><br/>
               <span class="subtotalTax">
