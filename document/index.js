@@ -141,6 +141,7 @@ body{
 .topTables{
    width:100%;
    border-top:1px solid black;
+   overflow-wrap: break-word;   
    margin-top:15px;
    min-height:180px;
 }
@@ -148,6 +149,8 @@ body{
    width:100%;
    margin-top:15px;
    min-height:180px;
+   overflow-wrap: break-word;
+
 }
 .top-box{
    width: 100%;
