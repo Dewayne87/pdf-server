@@ -131,7 +131,7 @@ body{
 
 .box{
    width:50%;
-   min-height:170px;
+   min-height:180px;
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
@@ -141,12 +141,12 @@ body{
    width:100%;
    border-top:1px solid black;
    margin-top:15px;
-   min-height:170px;
+   min-height:180px;
 }
 .topRows{
    width:100%;
    margin-top:15px;
-   min-height:170px;
+   min-height:180px;
 }
 .top-box{
    width: 100%;
