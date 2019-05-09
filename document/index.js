@@ -132,17 +132,13 @@ body{
 .box{
    width:50%;
    min-height:180px;
-   box-sizing:border-box;
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
-    border:1px solid red;
 }
 .topTables{
    width:100%;
    border-top:1px solid black;
-   overflow-wrap: break-word;   
-   box-sizing:border-box;
    margin-top:15px;
    min-height:180px;
 }
@@ -150,9 +146,6 @@ body{
    width:100%;
    margin-top:15px;
    min-height:180px;
-   overflow-wrap: break-word;
-   box-sizing:border-box;
-
 }
 .top-box{
    width: 100%;
