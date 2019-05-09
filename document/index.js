@@ -106,7 +106,7 @@ body{
 }
 .appbar{
    width:100%;
-   font-size:2.4rem;
+   font-size:2rem;
    padding:10px 0px 10px 0px;
    background: #eff7f2;
    box-shadow: 2px 5px 2px 2px silver;
@@ -124,7 +124,7 @@ body{
    border-bottom: 1px solid black;
 }
 .entryName {
-   font-size: 2rem;
+   font-size: 1.4rem;
    color: #4fc878;
    padding-bottom:5px;
 }
@@ -156,7 +156,7 @@ body{
    overflow-wrap: break-word;
 }
 .header {
-   font-size:3rem;
+   font-size:2.6rem;
    margin-bottom:10px;
 }
 .white{
