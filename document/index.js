@@ -18,36 +18,31 @@ module.exports = ({
   headerellipsis = str => {
     return str.length > 10 ? str.slice(0, 11) : str;
   };
-  const itemChecker = items => {
-    let emptyItems = [
-      {
-        name: "",
-        description: "",
-        cost: "",
-        quantity: "",
-        amount: ""
-      }
-    ];
-    return items ? items : emptyItems;
+  const itemChecker = i => {
+    let emptyItems = `<tr>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+      </tr>`;
+    return i.length > 1 ? invoiceItems : emptyItems;
   };
 
   capitalizeFirstLetter = str => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
-  let taxpercent = Number(tax) * 100;
-  // const invoiceItems = items.map(row => {
-  //   const { name, description, cost, quantity, amount} = row;
-  //   return (
-  //     `<tr class='invoice-item'>
-  //       <td>${name}</td>
-  //       <td>${description}</td>
-  //       <td>${cost}</td>
-  //       <td>${quantity}</td>
-  //       <td>${amount}</td>
-  //     </tr>`
-  //   )
-  // })
-  //   add items const to line 272 when items array working like this ->>//   ${items.join()}
+
+  const invoiceItems = items.map(row => {
+    const { name, description, cost, quantity, amount } = row;
+    return `<tr>
+        <td class="items">${name}</td>
+        <td class="items">${description}</td>
+        <td class="items">${cost}</td>
+        <td class="items">${quantity}</td>
+        <td class="items">${amount}</td>
+      </tr>`;
+  });
 
   return `
  <!DOCTYPE html>
@@ -56,76 +51,148 @@ module.exports = ({
     <meta charset="utf-8" />
     <title></title>
     <style>
-    body{
-     width:99%;
-    }
-    .container{
-     margin: "20px auto";
-     width:99%;
-    border: "1px solid #eff7f2"
-    }
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+   width:100%;
+}
+.container{
+   width:98%;
+   margin:1%;
+}
 .shippingDiscount {
-  background: lightgray;
+   background: lightgray;
 }
 .appbar{
-    width:100%;
-        backgroundColor: "#eff7f2",
-
+   width:100%;
+   font-size:2.4rem;
+   padding:10px 0px 10px 0px;
+   background: #eff7f2;
+   box-shadow: 2px 5px 2px 2px silver;
 }
 .subtotalTax {
-  background: #eff7f2;
+   background: #eff7f2;
 }
 .total-due {
-  background: rgb(224, 123, 105);
+   background: rgb(224, 123, 105);
 }
 .amount-paid {
-  background: #a8e4bc;
-}
-.box-container {
-  display: flex;
-  justify-content: space-between;
-  border:1px solid red;
+   background: #a8e4bc;
 }
 .bottom {
-  border-bottom: 1px solid black;
+   border-bottom: 1px solid black;
 }
 .entryName {
-  font-size: 1.4rem;
-  color: #4fc878;
+   font-size: 2rem;
+   color: #4fc878;
+   padding-bottom:5px;
 }
-.box {
-  width: 49%;
-  display:inline-block;
-  border:1px solid green;
-  height:350px;
-  font-size: 1.4rem;
-  overflow-wrap: break-word;
-}
-.boxmoney{
-    display:inline-block;
-    width:49%;
-    height:300px;
-  border:1px solid green;
-  font-size: 1.4rem;
-  overflow-wrap: break-word;
+
+.box{
+   width:50%;
+   min-height:220px;
+   padding-top:15px;
+   font-size: 2rem;
+   overflow-wrap: break-word;
 
 }
+.topTables{
+   width:100%;
+   border-top:1px solid black;
+   margin-top:15px;
+   min-height:220px;
+}
+.topRows{
+   width:100%;
+   margin-top:15px;
+   min-height:220px;
+}
 .top-box{
-  width: 100%;
-  height:200px;
+   width: 100%;
+   font-size: 2rem;
+   margin-top:15px;
+   margin-bottom:10px;
+   overflow-wrap: break-word;
 }
 .header {
-  font-size: 2rem;
+   font-size:3.4rem;
+   margin-bottom:10px;
 }
-    </style>
+.white{
+   color:white;
+   margin-bottom:10px;
+   width:100%
+}
+.items{
+   color:black;
+   font-size:1.6rem;
+   text-align:center;
+}
+.btmTable{
+   width:100%
+}
+.align{
+   text-align:center;
+}
+.divider{
+   width:100%;
+   border-top:1px solid black;
+   text-align:center;
+   padding-top:100px;
+   font-size: 2rem;
+}
+.btmTopRow{
+   margin-top:10px;
+}
+</style>
   </head>
   <body>
     <div class="container">
     <div class="appbar header"><h3>${capitalizeFirstLetter(
       company.name
     )}</h3></div>
-<div class="box-container bottom">
-            <div class="top-box box">
+            <div class="top-box">
               <p>
                 <strong>
                   <span class="entryName">Invoice #:</span>
@@ -153,14 +220,12 @@ module.exports = ({
                 ${" $" + balance}
               </p>
             </div>
-          </div>
-          <table>
-          <tr>
-          <td>
+          <table class="topTables">
+          <tr class="topRows">
+          <td class="box">
                 <strong>
-                  <span class="entryName">From:</span>
+                  <p class="entryName">From:</p>
                 </strong>
-                <br />
                 ${capitalizeFirstLetter(company.name)}
                 <br />
                 ${company.address1},${" " + company.address2}
@@ -173,11 +238,10 @@ module.exports = ({
                 <br />
                 ${" " + company.phoneNumber}
                 </td>
-<td>
+          <td class="box">
                 <strong>
-                  <span class="entryName">To:</span>
+                  <p class="entryName">To:</p>
                 </strong>
-                <br />
                 ${capitalizeFirstLetter(customer.name)}
                 <br />
                 ${customer.address1},${" " + customer.address2}
@@ -191,60 +255,57 @@ module.exports = ({
                 </td>
                 </tr>
                 </table>
-          </div>
-          <div class="box-container">
-            <div class="boxmoney">
-              <p>
+            <table class="topTables">
+            <tr class="topRows">
+            <td class="box">
                 <strong>
-                  <span class="entryName">Invoice Description:</span>
+                  <p class="entryName">Invoice Description:</p>
                 </strong>
-                <br />
                 ${description + "."}
-              </p>
-            </div>
-            <div class="boxmoney">
-              <span class="subtotalTax">Subtotal: $${subtotal}</span><br/>
-              <span class="shippingDiscount">Discount: $${discount}</span><br/>
-              <span class="subtotalTax">
+            </td>
+            <td class="box">
+              <p class="subtotalTax">Subtotal: $${subtotal}</p>
+              <p class="shippingDiscount">Discount: $${discount}</p>
+              <p class="subtotalTax">
                 Tax:
                 ${" " + Number(tax) * 100}%
-              </span><br/>
-              <span class="shippingDiscount">Shipping: $${shipping}</span><br/>
-              <span class="total-due">Total: $${total}</span><br/>
-              <span class="amount-paid">Balance: $${balance}</span><br/>
-            </div>
-          </div>
-          <div class="box-container">
-            <div class="box">
-              <p>
-                <strong>
-                  <span class="entryName">Notes (if applicable):</span>
-                </strong>
-                <br />
-                ${notes + "."}
               </p>
-            </div>
-            <div class="box">
-              <p>
-                <strong>
-                  <span class="entryName">Terms (if applicable):</span>
-                </strong>
-                <br />
-                ${terms + "."}
-              </p>
-            </div>
-          </div>
-
-    <div class="appbar header"><h3>Invoice Items (if applicable)</h3></div>
-            <table>
-            <tr>
-                <td>Name</td>
-                <td>Description</td>
-                <td>Cost</td>
-                <td>Quantity</td>
-                <td>Amount</td>
+              <p class="shippingDiscount">Shipping: $${shipping}</p>
+              <p class="total-due">Total: $${total}</p>
+              <p class="amount-paid">Balance: $${balance}</p>
+            </td>
             </tr>
             </table>
+            <table class="topTables">
+            <tr class="topRows">
+            <td class="box">
+                <strong>
+                  <p class="entryName">Notes (if applicable):</p>
+                </strong>
+                ${notes + "."}
+        </td>
+        <td class="box">
+                <strong>
+                  <p class="entryName">Terms (if applicable):</p>
+                </strong>
+                ${terms + "."}
+        </td>
+        </tr>
+        </table>
+        <div class="divider">****Look to next page for Invoice Items (if applicable)****</div>
+    <div class="appbar"><h3>Invoice Items (if applicable)</h3></div>
+    <div class="white">
+            <table class="btmTable" >
+            <tr class="btmTopRow">
+                <td class="entryName align">Name</td>
+                <td class="entryName align">Description</td>
+                <td class="entryName align">Cost</td>
+                <td class="entryName align">Quantity</td>
+                <td class="entryName align">Amount</td>
+            </tr>
+            ${itemChecker(items)}
+            </table>
+            </div>
     </div>
   </body>
 </html>

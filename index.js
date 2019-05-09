@@ -8,7 +8,7 @@ const cors = require("cors");
 const pdfTemplate = require("./document");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 app.use(helmet());
 app.use(logger("dev"))
 app.use(cors());
