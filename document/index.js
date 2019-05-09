@@ -106,7 +106,7 @@ body{
 }
 .appbar{
    width:100%;
-   font-size:2rem;
+   font-size:1.8rem;
    padding:10px 0px 10px 0px;
    background: #eff7f2;
    box-shadow: 2px 5px 2px 2px silver;
@@ -131,7 +131,7 @@ body{
 
 .box{
    width:50%;
-   min-height:200px;
+   min-height:150px;
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
@@ -141,12 +141,12 @@ body{
    width:100%;
    border-top:1px solid black;
    margin-top:15px;
-   min-height:200px;
+   min-height:150px;
 }
 .topRows{
    width:100%;
    margin-top:15px;
-   min-height:200px;
+   min-height:150px;
 }
 .top-box{
    width: 100%;
@@ -156,7 +156,7 @@ body{
    overflow-wrap: break-word;
 }
 .header {
-   font-size:2.6rem;
+   font-size:2.2rem;
    margin-bottom:10px;
 }
 .white{
@@ -180,7 +180,7 @@ body{
    border-top:1px solid black;
    text-align:center;
    padding-top:10px;
-   font-size: 1.4rem;
+   font-size: 1.2rem;
 }
 .btmTopRow{
    margin-top:10px;
