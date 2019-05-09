@@ -106,7 +106,7 @@ body{
 }
 .appbar{
    width:100%;
-   font-size:1.8rem;
+   font-size:1.6rem;
    padding:10px 0px 10px 0px;
    background: #eff7f2;
    box-shadow: 2px 5px 2px 2px silver;
@@ -166,7 +166,7 @@ body{
 }
 .items{
    color:black;
-   font-size:1.2rem;
+   font-size:1.3rem;
    text-align:center;
 }
 .btmTable{
@@ -174,7 +174,7 @@ body{
 }
 .align{
    text-align:center;
-   font-size:1.2rem
+   font-size:1.3rem
 }
 .divider{
    width:100%;
