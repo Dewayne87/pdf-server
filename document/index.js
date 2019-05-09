@@ -131,7 +131,7 @@ body{
 
 .box{
    width:50%;
-   min-height:220px;
+   min-height:200px;
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
@@ -141,12 +141,12 @@ body{
    width:100%;
    border-top:1px solid black;
    margin-top:15px;
-   min-height:220px;
+   min-height:200px;
 }
 .topRows{
    width:100%;
    margin-top:15px;
-   min-height:220px;
+   min-height:200px;
 }
 .top-box{
    width: 100%;
@@ -166,7 +166,7 @@ body{
 }
 .items{
    color:black;
-   font-size:1.6rem;
+   font-size:1.4rem;
    text-align:center;
 }
 .btmTable{
@@ -179,8 +179,8 @@ body{
    width:100%;
    border-top:1px solid black;
    text-align:center;
-   padding-top:100px;
-   font-size: 2rem;
+   padding-top:10px;
+   font-size: 1.4rem;
 }
 .btmTopRow{
    margin-top:10px;
