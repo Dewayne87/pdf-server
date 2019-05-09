@@ -166,7 +166,7 @@ body{
 }
 .items{
    color:black;
-   font-size:1.25rem;
+   font-size:1.2rem;
    text-align:center;
 }
 .btmTable{
@@ -174,7 +174,7 @@ body{
 }
 .align{
    text-align:center;
-   font-size:1.25rem
+   font-size:1.2rem
 }
 .divider{
    width:100%;
