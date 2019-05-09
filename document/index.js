@@ -166,14 +166,15 @@ body{
 }
 .items{
    color:black;
-   font-size:1.4rem;
-   text-align:left;
+   font-size:1.2rem;
+   text-align:center;
 }
 .btmTable{
    width:100%
 }
 .align{
-   text-align:left;
+   text-align:center;
+   font-size:1.2rem
 }
 .divider{
    width:100%;
@@ -185,6 +186,7 @@ body{
 .btmTopRow{
    margin-top:10px;
 }
+
 </style>
   </head>
   <body>
