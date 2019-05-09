@@ -133,7 +133,7 @@ body{
    width:50%;
    min-height:220px;
    padding-top:15px;
-   font-size: 2rem;
+   font-size: 1.4rem;
    overflow-wrap: break-word;
 
 }
@@ -150,13 +150,13 @@ body{
 }
 .top-box{
    width: 100%;
-   font-size: 2rem;
+   font-size: 1.4rem;
    margin-top:15px;
    margin-bottom:10px;
    overflow-wrap: break-word;
 }
 .header {
-   font-size:3.4rem;
+   font-size:3rem;
    margin-bottom:10px;
 }
 .white{
