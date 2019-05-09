@@ -135,7 +135,7 @@ body{
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
-
+    border:1px solid red;
 }
 .topTables{
    width:100%;
