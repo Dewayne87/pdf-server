@@ -167,13 +167,13 @@ body{
 .items{
    color:black;
    font-size:1.4rem;
-   text-align:center;
+   text-align:left;
 }
 .btmTable{
    width:100%
 }
 .align{
-   text-align:center;
+   text-align:left;
 }
 .divider{
    width:100%;
