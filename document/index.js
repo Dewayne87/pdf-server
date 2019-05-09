@@ -132,6 +132,7 @@ body{
 .box{
    width:50%;
    min-height:180px;
+   box-sizing:border-box;
    padding-top:15px;
    font-size: 1.4rem;
    overflow-wrap: break-word;
@@ -252,7 +253,7 @@ body{
                 ${" " + customer.state.toUpperCase()}
                 ${" " + customer.zipCode}
                 <br />
-                </br>
+                ${customer.email}</br>
                 ${" " + customer.phoneNumber}
                 </td>
                 </tr>
