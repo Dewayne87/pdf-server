@@ -142,6 +142,7 @@ body{
    width:100%;
    border-top:1px solid black;
    overflow-wrap: break-word;   
+   box-sizing:border-box;
    margin-top:15px;
    min-height:180px;
 }
@@ -150,6 +151,7 @@ body{
    margin-top:15px;
    min-height:180px;
    overflow-wrap: break-word;
+   box-sizing:border-box;
 
 }
 .top-box{
