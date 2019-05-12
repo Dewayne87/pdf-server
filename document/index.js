@@ -240,9 +240,9 @@ body{
                 ${" " + company.state.toUpperCase()}
                 ${" " + company.zipCode}
                 <br />
-                ${company.email}${company.email}
+                ${company.email}
                 <br />
-                ${" " + company.phoneNumber}
+                ${company.phoneNumber}
                 </td>
           <td class="box">
                 <strong>
@@ -256,8 +256,9 @@ body{
                 ${" " + customer.state.toUpperCase()}
                 ${" " + customer.zipCode}
                 <br />
-                ${customer.email}${customer.email}</br>
-                ${" " + customer.phoneNumber}
+                ${customer.email}
+                </br>
+                ${customer.phoneNumber}
                 </td>
                 </tr>
                 </table>
