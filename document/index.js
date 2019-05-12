@@ -134,18 +134,21 @@ body{
    min-height:180px;
    padding-top:15px;
    font-size: 1.4rem;
-   overflow-wrap: break-word;
+   word-wrap:break-word
 }
 .topTables{
    width:100%;
    border-top:1px solid black;
    margin-top:15px;
    min-height:180px;
+   table-layout: fixed;
 }
 .topRows{
    width:100%;
    margin-top:15px;
    min-height:180px;
+   word-wrap:break-word
+
 }
 .top-box{
    width: 100%;
@@ -167,9 +170,11 @@ body{
    color:black;
    font-size:1.2rem;
    text-align:center;
+   word-wrap:break-word
 }
 .btmTable{
-   width:100%
+   width:100%;
+   table-layout: fixed;
 }
 .align{
    text-align:center;
@@ -283,8 +288,7 @@ body{
                 <strong>
                   <p class="entryName">Notes (if applicable):</p>
                 </strong>
-                ${notes +
-                  "."}vulputate eu scelerisque felis imperdiet. Rhoncus est pellentesque elit ullamcorper. Pellentesque sit amet porttitor eget dolor morbi. Tortor id aliquet lectus proin nibh nisl condimentum id. Gravida rutrum quisque non tellus orci. At auctor urna nunc id cursus. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Blandit turpis cursus in hac. Elementum nibh tellus molestie nunc non blandit massa enim nec. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Auctor eu augue ut lectus arcu bibendum at varius vel.
+                ${notes + "."}
         </td>
         <td class="box">
                 <strong>
