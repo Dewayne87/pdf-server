@@ -283,7 +283,8 @@ body{
                 <strong>
                   <p class="entryName">Notes (if applicable):</p>
                 </strong>
-                ${notes + "."}
+                ${notes +
+                  "."}vulputate eu scelerisque felis imperdiet. Rhoncus est pellentesque elit ullamcorper. Pellentesque sit amet porttitor eget dolor morbi. Tortor id aliquet lectus proin nibh nisl condimentum id. Gravida rutrum quisque non tellus orci. At auctor urna nunc id cursus. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Blandit turpis cursus in hac. Elementum nibh tellus molestie nunc non blandit massa enim nec. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Auctor eu augue ut lectus arcu bibendum at varius vel.
         </td>
         <td class="box">
                 <strong>
