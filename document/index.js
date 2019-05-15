@@ -185,7 +185,7 @@ body{
    width:100%;
    border-top:1px solid black;
    text-align:center;
-   padding-top:20px;
+   padding-top:10px;
    font-size: 1.2rem;
 }
 .btmTopRow{
