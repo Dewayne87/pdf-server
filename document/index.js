@@ -170,7 +170,7 @@ body{
    color:black;
    font-size:1.2rem;
    text-align:center;
-   padding-bottom:10px;
+   padding-bottom:5px;
    word-wrap:break-word
 }
 .btmTable{
@@ -258,7 +258,7 @@ body{
                 ${" " + customer.state.toUpperCase()}
                 ${" " + customer.zipCode}
                 <br />
-                ${customer.email}${customer.email}
+                ${customer.email}
                 </br>
                 ${customer.phoneNumber}
                 </td>
