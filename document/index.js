@@ -258,7 +258,7 @@ body{
                 ${" " + customer.state.toUpperCase()}
                 ${" " + customer.zipCode}
                 <br />
-                ${customer.email}
+                ${customer.email}${customer.email}
                 </br>
                 ${customer.phoneNumber}
                 </td>
