@@ -170,6 +170,7 @@ body{
    color:black;
    font-size:1.2rem;
    text-align:center;
+   padding-bottom:10px;
    word-wrap:break-word
 }
 .btmTable{
@@ -184,7 +185,7 @@ body{
    width:100%;
    border-top:1px solid black;
    text-align:center;
-   padding-top:30px;
+   padding-top:20px;
    font-size: 1.2rem;
 }
 .btmTopRow{
