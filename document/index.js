@@ -18,16 +18,6 @@ module.exports = ({
   headerellipsis = str => {
     return str.length > 10 ? str.slice(0, 11) : str;
   };
-  const itemChecker = i => {
-    let emptyItems = `<tr>
-        <td class="items"></td>
-        <td class="items"></td>
-        <td class="items"></td>
-        <td class="items"></td>
-        <td class="items"></td>
-      </tr>`;
-    return i.length > 1 ? invoiceItems : emptyItems;
-  };
 
   capitalizeFirstLetter = str => {
     return str.charAt(0).toUpperCase() + str.slice(1);
@@ -43,6 +33,16 @@ module.exports = ({
         <td class="items">${amount}</td>
       </tr>`;
   });
+  const itemChecker = i => {
+    let emptyItems = `<tr>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+        <td class="items"></td>
+      </tr>`;
+    return i.length > 0 ? invoiceItems : emptyItems;
+  };
 
   return `
  <!DOCTYPE html>
@@ -108,7 +108,7 @@ body{
    width:100%;
    font-size:1.6rem;
    padding:10px 0px 10px 0px;
-   background: #eff7f2;
+   background: #ffffff;
    box-shadow: 2px 5px 2px 2px silver;
 }
 .subtotalTax {
@@ -118,14 +118,14 @@ body{
    background: rgb(224, 123, 105);
 }
 .amount-paid {
-   background: #a8e4bc;
+   background: #8bc34a;
 }
 .bottom {
    border-bottom: 1px solid black;
 }
 .entryName {
    font-size: 1.4rem;
-   color: #4fc878;
+   color: #8bc34a;
    padding-bottom:5px;
 }
 
