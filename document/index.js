@@ -179,7 +179,8 @@ body{
 }
 .align{
    text-align:center;
-   font-size:1.2rem
+   font-size:1.2rem;
+   padding-top: 10px;
 }
 .divider{
    width:100%;
@@ -191,7 +192,6 @@ body{
 }
 .btmTopRow{
    margin-top:10px;
-   padding-bottom: 10px;
 }
 
 </style>
