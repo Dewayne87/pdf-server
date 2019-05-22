@@ -27,7 +27,7 @@ module.exports = ({
     const { name, description, cost, quantity, amount } = row;
     return `<tr>
         <td class="items">${name}</td>
-        <td class="items">${description}</td>
+        <td class="items">${description ? description + ".":"None"}</td>
         <td class="items">${cost}</td>
         <td class="items">${quantity}</td>
         <td class="items">${amount}</td>
