@@ -271,7 +271,7 @@ body{
                 <strong>
                   <p class="entryName">Invoice Description:</p>
                 </strong>
-                {description ? description + ".":"None"}
+                ${description ? description + ".":"None"}
             </td>
             <td class="box">
               <p class="subtotalTax">Subtotal: $${subtotal}</p>
@@ -292,13 +292,13 @@ body{
                 <strong>
                   <p class="entryName">Notes (if applicable):</p>
                 </strong>
-                {notes ? notes + ".":"None"}
+                ${notes ? notes + ".":"None"}
         </td>
         <td class="box">
                 <strong>
                   <p class="entryName">Terms (if applicable):</p>
                 </strong>
-                {terms ? terms + ".":"None"}
+                ${terms ? terms + ".":"None"}
         </td>
         </tr>
         </table>
